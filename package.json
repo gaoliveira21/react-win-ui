@@ -8,8 +8,8 @@
     "test:watch": "yarn test --watch",
     "lint": "eslint src --max-warnings=0",
     "prepare": "husky install",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public"
   },
   "keywords": [],
   "author": "",
