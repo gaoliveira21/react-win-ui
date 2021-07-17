@@ -9,6 +9,7 @@
     "test:ci": "npm test -- --coverage",
     "lint": "eslint src --max-warnings=0",
     "prepare": "husky install",
+    "generate": "plop --plopfile ./generators/plopfile.js",
     "start": "start-storybook -s ./public -p 3000",
     "build": "build-storybook -s ./public"
   },
