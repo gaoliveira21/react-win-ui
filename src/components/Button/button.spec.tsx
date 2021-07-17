@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { Button } from './Button'
+import { Button } from '.'
 
 describe('Button', () => {
   it('Should render correct chldren', () => {
