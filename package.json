@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "test:watch": "npm test --watch",
-    "test:staged": "npm test --findRelatedTests",
-    "test:ci": "npm test --coverage",
+    "test:watch": "npm test -- --watch",
+    "test:ci": "npm test -- --coverage",
     "lint": "eslint src --max-warnings=0",
     "prepare": "husky install",
     "start": "start-storybook -s ./public -p 3000",
