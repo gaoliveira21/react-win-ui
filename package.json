@@ -10,8 +10,8 @@
     "test:ci": "yarn test -- --coverage",
     "lint": "eslint src --max-warnings=0",
     "prepare": "husky install",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
+    "start": "start-storybook -s ./public -p 3000",
+    "build": "build-storybook -s ./public"
   },
   "keywords": [],
   "author": "",
