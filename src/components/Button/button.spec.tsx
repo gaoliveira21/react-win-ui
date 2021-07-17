@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+import 'jest-styled-components'
 import { Button } from '.'
 
 type SutTypes = {
@@ -19,5 +20,11 @@ describe('Button', () => {
     const { button } = makeSut(btnChildren)
 
     expect(button.textContent).toBe(btnChildren)
+  })
+
+  it('Should have pointer cursor', () => {
+    const { button } = makeSut()
+
+    expect(button).toHaveStyleRule('cursor', 'pointer')
   })
 })
