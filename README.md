@@ -4,7 +4,7 @@
 
 UI Kit built with React based on [Windows UI](https://www.figma.com/community/file/989931624019688277)
 
-## :hammer_wrench: Tools
+## :hammer_and_wrench: Tools
 
 - :atom: [ReactJS](https://pt-br.reactjs.org/)
 - :collision: [TypeScript](https://www.typescriptlang.org/)
