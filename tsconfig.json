@@ -13,13 +13,16 @@
     "rootDir": "src",
     "baseUrl": "src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "*"
+      ]
     },
     "allowJs": true,
     "resolveJsonModule": true
   },
   "include": [
-    "src"
+    "src",
+    "./jest-styled-components.d.ts"
   ],
   "exclude": [
     "node_modules"
