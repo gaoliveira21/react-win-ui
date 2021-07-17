@@ -2,7 +2,7 @@
 
 ## React Windows UI
 
-UI Kit built with React based on [Windows UI](https://www.figma.com/community/file/989931624019688277)
+:art: UI Kit built with React based on [Windows UI](https://www.figma.com/community/file/989931624019688277)
 
 ## :hammer_and_wrench: Tools
 
