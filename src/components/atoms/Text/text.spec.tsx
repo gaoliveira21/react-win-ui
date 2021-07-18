@@ -20,4 +20,17 @@ describe('Testing Text component', () => {
     expect(text).toHaveStyleRule('line-height', bodyFonts.BODY.lineHeight)
     expect(text).toHaveStyleRule('font-weight', bodyFonts.BODY.weight)
   })
+
+  it('Should render Text with correct children prop', () => {
+    const textContent = 'any_text'
+    const { container } = render(
+      <ThemeProvider>
+        <Text>{textContent}</Text>
+      </ThemeProvider>
+    )
+
+    const text = container.firstChild
+
+    expect(text.textContent).toBe(textContent)
+  })
 })
