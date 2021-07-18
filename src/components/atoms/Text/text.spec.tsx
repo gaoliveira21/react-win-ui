@@ -5,32 +5,42 @@ import { bodyFonts } from '@/styles/typography'
 
 import { Text } from '.'
 
+type SutTypes = {
+  sut: Element
+}
+
+type SutParams = {
+  textContent?: string
+}
+
+const makeSut = (params: SutParams = { textContent: 'any_text' }): SutTypes => {
+  const { container } = render(
+    <ThemeProvider>
+      <Text>{params.textContent}</Text>
+    </ThemeProvider>
+  )
+
+  const sut = container.firstElementChild
+
+  return {
+    sut
+  }
+}
+
 describe('Testing Text component', () => {
   it('Should render Text with correct initial styles', () => {
-    const { container } = render(
-      <ThemeProvider>
-        <Text>any_text</Text>
-      </ThemeProvider>
-    )
+    const { sut } = makeSut()
 
-    const text = container.firstChild
-
-    expect(text).toHaveStyleRule('font-family', bodyFonts.BODY.fontFamily)
-    expect(text).toHaveStyleRule('font-size', bodyFonts.BODY.size)
-    expect(text).toHaveStyleRule('line-height', bodyFonts.BODY.lineHeight)
-    expect(text).toHaveStyleRule('font-weight', bodyFonts.BODY.weight)
+    expect(sut).toHaveStyleRule('font-family', bodyFonts.BODY.fontFamily)
+    expect(sut).toHaveStyleRule('font-size', bodyFonts.BODY.size)
+    expect(sut).toHaveStyleRule('line-height', bodyFonts.BODY.lineHeight)
+    expect(sut).toHaveStyleRule('font-weight', bodyFonts.BODY.weight)
   })
 
   it('Should render Text with correct children prop', () => {
-    const textContent = 'any_text'
-    const { container } = render(
-      <ThemeProvider>
-        <Text>{textContent}</Text>
-      </ThemeProvider>
-    )
+    const textContent = 'text_content'
+    const { sut } = makeSut({ textContent })
 
-    const text = container.firstChild
-
-    expect(text.textContent).toBe(textContent)
+    expect(sut.textContent).toBe(textContent)
   })
 })
