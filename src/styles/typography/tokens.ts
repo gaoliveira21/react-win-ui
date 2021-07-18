@@ -1,6 +1,6 @@
 export enum FONT_WEIGHT {
-  NORMAL = 400,
-  STRONG = 600
+  NORMAL = '400',
+  STRONG = '600'
 }
 
 export enum FONT_FAMILY {

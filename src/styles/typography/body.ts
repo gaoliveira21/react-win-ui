@@ -10,26 +10,26 @@ export type BodyFonts = {
 export const bodyFonts: BodyFonts = {
   CAPTION: {
     weight: FONT_WEIGHT.NORMAL,
-    size: 12,
-    lineHeight: 16,
+    size: '12px',
+    lineHeight: '16px',
     fontFamily: FONT_FAMILY.PRIMARY
   },
   BODY: {
     weight: FONT_WEIGHT.NORMAL,
-    size: 14,
-    lineHeight: 20,
+    size: '14px',
+    lineHeight: '20px',
     fontFamily: FONT_FAMILY.PRIMARY
   },
   BODY_STRONG: {
     weight: FONT_WEIGHT.STRONG,
-    size: 14,
-    lineHeight: 20,
+    size: '14px',
+    lineHeight: '20px',
     fontFamily: FONT_FAMILY.PRIMARY
   },
   BODY_LARGE: {
     weight: FONT_WEIGHT.NORMAL,
-    size: 18,
-    lineHeight: 24,
+    size: '18px',
+    lineHeight: '24px',
     fontFamily: FONT_FAMILY.PRIMARY
   }
 }
