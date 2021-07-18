@@ -7,4 +7,6 @@ export default {
   component: Text
 } as Meta
 
-export const Basic: Story = (args) => <Text {...args} />
+export const Basic: Story = (args) => (
+  <Text {...args}>Basic Text Component</Text>
+)
