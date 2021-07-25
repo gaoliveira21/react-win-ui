@@ -43,4 +43,10 @@ describe('Testing Text component', () => {
 
     expect(sut.textContent).toBe(textContent)
   })
+
+  it('Should render as paragraph by default', () => {
+    const { sut } = makeSut()
+
+    expect(sut.tagName.toLowerCase()).toBe('p')
+  })
 })
