@@ -1,10 +1,21 @@
+import { BodyFonts } from '@/styles/typography'
+
 import * as S from './styles'
 
 export type TextProps = {
   children: React.ReactNode
   as?: 'p' | 'strong' | 'span' | 'output' | 'i' | 'small'
+  variant?: Lowercase<keyof BodyFonts>
 }
 
-export function Text({ children, as = 'p' }: TextProps): React.ReactElement {
-  return <S.Text as={as}>{children}</S.Text>
+export function Text({
+  children,
+  as = 'p',
+  variant = 'body'
+}: TextProps): React.ReactElement {
+  return (
+    <S.Text as={as} variant={variant}>
+      {children}
+    </S.Text>
+  )
 }

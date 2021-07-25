@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
-export const Text = styled.p`
-  font-family: ${({ theme }) => theme.fonts.text.BODY.fontFamily};
-  font-size: ${({ theme }) => theme.fonts.text.BODY.size};
-  font-weight: ${({ theme }) => theme.fonts.text.BODY.weight};
-  line-height: ${({ theme }) => theme.fonts.text.BODY.lineHeight};
+import { TextProps } from '.'
+
+export const Text = styled.p<Pick<TextProps, 'variant'>>`
+  font-family: ${({ theme, variant }) =>
+    theme.fonts.text[variant.toUpperCase()].fontFamily};
+  font-size: ${({ theme, variant }) =>
+    theme.fonts.text[variant.toUpperCase()].size};
+  font-weight: ${({ theme, variant }) =>
+    theme.fonts.text[variant.toUpperCase()].weight};
+  line-height: ${({ theme, variant }) =>
+    theme.fonts.text[variant.toUpperCase()].lineHeight};
 `
