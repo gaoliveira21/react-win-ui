@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 
 import { ThemeProvider } from '@/contexts/theme/provider'
 import { bodyFonts } from '@/styles/typography'
-import { ligthTextColors } from '@/styles/colors'
+import { ligthTextColors, darkTextColors } from '@/styles/colors'
 
 import { Text, TextProps } from '.'
 
@@ -15,11 +15,12 @@ type SutParams = {
   as?: TextProps['as']
   variant?: TextProps['variant']
   color?: TextProps['color']
+  dark?: boolean
 }
 
 const makeSut = (params: SutParams = { textContent: 'any_text' }): SutTypes => {
   const { container } = render(
-    <ThemeProvider>
+    <ThemeProvider dark={params.dark}>
       <Text as={params.as} variant={params.variant} color={params.color}>
         {params.textContent}
       </Text>
@@ -102,5 +103,11 @@ describe('Testing Text component', () => {
     const { sut } = makeSut({ color: 'accent_primary' })
 
     expect(sut).toHaveStyleRule('color', ligthTextColors.ACCENT_PRIMARY)
+  })
+
+  it('Should render with correct color if dark mode is enable', () => {
+    const { sut } = makeSut({ dark: true })
+
+    expect(sut).toHaveStyleRule('color', darkTextColors.PRIMARY)
   })
 })
