@@ -14,12 +14,13 @@ type SutParams = {
   textContent?: string
   as?: TextProps['as']
   variant?: TextProps['variant']
+  color?: TextProps['color']
 }
 
 const makeSut = (params: SutParams = { textContent: 'any_text' }): SutTypes => {
   const { container } = render(
     <ThemeProvider>
-      <Text as={params.as} variant={params.variant}>
+      <Text as={params.as} variant={params.variant} color={params.color}>
         {params.textContent}
       </Text>
     </ThemeProvider>
@@ -95,5 +96,11 @@ describe('Testing Text component', () => {
     const { sut } = makeSut({ variant })
 
     assertFontStyle(sut, variant)
+  })
+
+  it('Should render with correct color', () => {
+    const { sut } = makeSut({ color: 'accent_primary' })
+
+    expect(sut).toHaveStyleRule('color', ligthTextColors.ACCENT_PRIMARY)
   })
 })
