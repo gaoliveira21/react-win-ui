@@ -2,6 +2,7 @@ import { render } from '@testing-library/react'
 
 import { ThemeProvider } from '@/contexts/theme/provider'
 import { bodyFonts } from '@/styles/typography'
+import { ligthTextColors } from '@/styles/colors'
 
 import { Text, TextProps } from '.'
 
@@ -45,6 +46,7 @@ const assertFontStyle = (sut: Element, font: TextProps['variant'] = 'body') => {
     'font-weight',
     bodyFonts[font.toUpperCase()].weight
   )
+  expect(sut).toHaveStyleRule('color', ligthTextColors.PRIMARY)
 }
 
 describe('Testing Text component', () => {
