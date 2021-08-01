@@ -11,4 +11,5 @@ export const Text = styled.p<Pick<TextProps, 'variant'>>`
     theme.fonts.text[variant.toUpperCase()].weight};
   line-height: ${({ theme, variant }) =>
     theme.fonts.text[variant.toUpperCase()].lineHeight};
+  color: ${({ theme }) => theme.colors.text.PRIMARY};
 `
