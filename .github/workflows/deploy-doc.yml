@@ -17,11 +17,13 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Deploy Documentation
+      - name: Install and Build
         run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn install --frozen-lockfile
           yarn docs:build
-          yarn docs:deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy Documentation
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: storybook-static
