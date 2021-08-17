@@ -20,7 +20,11 @@
     "release": "auto shipit --base-branch=main"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Gabriel José de Oliveira",
+    "email": "gaoliveira211999@gmail.com",
+    "url": "https://github.com/gaoliveira21"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.6",
