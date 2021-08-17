@@ -6,3 +6,4 @@ storybook-static
 
 # production
 dist
+.env
