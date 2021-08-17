@@ -19,6 +19,9 @@ jobs:
 
       - name: Deploy Documentation
         run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn install --frozen-lockfile
           yarn docs:build
           yarn docs:deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
