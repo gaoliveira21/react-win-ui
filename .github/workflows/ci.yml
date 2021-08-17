@@ -1,14 +1,11 @@
 name: ci
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
 
 jobs:
-  check-release:
+  check-pr:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository

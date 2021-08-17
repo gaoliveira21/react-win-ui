@@ -1,5 +1,5 @@
 {
-  "name": "@gaoliveira21/react-win-ui",
+  "name": "react-win-ui",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -16,7 +16,8 @@
     "generate": "plop --plopfile ./generators/plopfile.js",
     "docs:start": "start-storybook -s ./public -p 3000",
     "docs:build": "build-storybook -s ./public",
-    "build": "rimraf dist && tsc && tscpaths -p tsconfig.json -s src -o dist"
+    "build": "rimraf dist && tsc && tscpaths -p tsconfig.json -s src -o dist",
+    "release": "auto shipit --base-branch=main"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +40,7 @@
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
+    "auto": "^10.31.0",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
     "eslint": "^7.30.0",
