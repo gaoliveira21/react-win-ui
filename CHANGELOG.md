@@ -1,3 +1,20 @@
+# v0.4.0 (Tue Aug 17 2021)
+
+#### 🚀 Enhancement
+
+- fix: add prepare repository [#5](https://github.com/gaoliveira21/react-win-ui/pull/5) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### 🐛 Bug Fix
+
+- feat: add author [#6](https://github.com/gaoliveira21/react-win-ui/pull/6) ([@gaoliveira21](https://github.com/gaoliveira21))
+- fix: use npm instead yar [#4](https://github.com/gaoliveira21/react-win-ui/pull/4) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.3.2 (Tue Aug 17 2021)
 
 
