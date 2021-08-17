@@ -32,6 +32,23 @@
 
 ---
 
+# v0.1.0 (Tue Aug 17 2021)
+
+#### 🚀 Enhancement
+
+- fix: resolve syntax error [#2](https://github.com/gaoliveira21/react-win-ui/pull/2) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### 🐛 Bug Fix
+
+- fix: resolve syntax error [#3](https://github.com/gaoliveira21/react-win-ui/pull/3) ([@gaoliveira21](https://github.com/gaoliveira21))
+- Setup release workflow [#1](https://github.com/gaoliveira21/react-win-ui/pull/1) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.0.2 (Tue Aug 17 2021)
 
 #### ⚠️ Pushed to `main`
