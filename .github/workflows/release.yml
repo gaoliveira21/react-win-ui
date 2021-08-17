@@ -13,7 +13,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        run: git fetch --unshallow --tags
 
       - name: Setup Node
         uses: actions/setup-node@v2
