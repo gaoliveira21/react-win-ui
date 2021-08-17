@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest --passWithNoTests",
     "test:watch": "npm test -- --watch",
@@ -12,9 +14,9 @@
     "lint": "eslint src --max-warnings=0",
     "prepare": "husky install",
     "generate": "plop --plopfile ./generators/plopfile.js",
-    "doc:start": "start-storybook -s ./public -p 3000",
-    "doc:build": "build-storybook -s ./public",
-    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s src -o dist"
+    "docs:start": "start-storybook -s ./public -p 3000",
+    "docs:build": "build-storybook -s ./public",
+    "build": "rimraf dist && tsc && tscpaths -p tsconfig.json -s src -o dist"
   },
   "keywords": [],
   "author": "",

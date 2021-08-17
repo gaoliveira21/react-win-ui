@@ -3,3 +3,6 @@ coverage
 
 # storybook
 storybook-static
+
+# production
+dist
