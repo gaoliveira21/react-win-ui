@@ -16,6 +16,7 @@
     "generate": "plop --plopfile ./generators/plopfile.js",
     "docs:start": "start-storybook -s ./public -p 3000",
     "docs:build": "build-storybook -s ./public",
+    "docs:deploy": "gh-pages -d storybook-static",
     "build": "rimraf dist && tsc && tscpaths -p tsconfig.json -s src -o dist",
     "release": "auto shipit --base-branch=main"
   },
@@ -25,6 +26,7 @@
     "email": "gaoliveira211999@gmail.com",
     "url": "https://github.com/gaoliveira21"
   },
+  "homepage": "http://gaoliveira21.github.io/react-win-ui",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -52,6 +54,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "git-commit-msg-linter": "^3.2.6",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
