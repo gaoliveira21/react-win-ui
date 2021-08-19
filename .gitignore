@@ -7,3 +7,4 @@ storybook-static
 # production
 dist
 .env
+storybook-static
