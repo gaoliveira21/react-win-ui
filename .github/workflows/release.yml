@@ -22,10 +22,10 @@ jobs:
           node-version: 14.x
 
       - name: Create Release
+        run: |
+            yarn install --frozen-lockfile
+            yarn build
+            npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          yarn install --frozen-lockfile
-          yarn build
-          npm run release
