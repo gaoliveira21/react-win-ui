@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/contexts/theme/provider'
 import { bodyFonts } from '@/styles/typography'
 import { ligthTextColors, darkTextColors } from '@/styles/colors'
 
-import { Text, TextProps } from '.'
+import { Text, TextProps } from '@/components/atoms/Text'
 
 type SutTypes = {
   sut: Element
