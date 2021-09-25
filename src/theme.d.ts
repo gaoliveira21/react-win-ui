@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { DefaultTheme } from 'styled-components'
-import { ThemeProviderData } from '@/contexts/theme/context'
+import 'styled-components'
+import { Theme } from '@/styles/theme'
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends ThemeProviderData {}
+  export interface DefaultTheme extends Theme {}
 }

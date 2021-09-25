@@ -1,20 +1,23 @@
-import { darkTextColors, ligthTextColors } from '@/styles/colors'
-import { useState } from 'react'
+import { useState, createContext } from 'react'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 
-import { ThemeContext, ThemeProviderData, initialData } from './context'
+import { darkTextColors, ligthTextColors } from '@/styles/colors'
+import { theme as defaultTheme, Theme } from '@/styles/theme'
+import { GlobalStyles } from '@/styles/global'
 
-type ThemeProviderProps = {
+export type ThemeProviderProps = {
   children?: React.ReactNode
   dark?: boolean
 }
+
+export const ThemeContext = createContext<Theme>(defaultTheme)
 
 export function ThemeProvider({
   children,
   dark = false
 }: ThemeProviderProps): React.ReactElement {
-  const [theme] = useState<ThemeProviderData>(() => ({
-    ...initialData,
+  const [theme] = useState<Theme>(() => ({
+    ...defaultTheme,
     dark,
     colors: {
       text: dark ? darkTextColors : ligthTextColors
@@ -23,6 +26,7 @@ export function ThemeProvider({
 
   return (
     <ThemeContext.Provider value={theme}>
+      <GlobalStyles />
       <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   )
