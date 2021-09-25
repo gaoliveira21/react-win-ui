@@ -5,7 +5,7 @@ import { darkTextColors, ligthTextColors } from '@/styles/colors'
 import { theme as defaultTheme, Theme } from '@/styles/theme'
 import { GlobalStyles } from '@/styles/global'
 
-type ThemeProviderProps = {
+export type ThemeProviderProps = {
   children?: React.ReactNode
   dark?: boolean
 }

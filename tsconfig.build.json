@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "exclude": [
-    "node_modules",
     "**/*.spec.tsx",
     "**/*.spec.ts",
     "**/*.stories.tsx"

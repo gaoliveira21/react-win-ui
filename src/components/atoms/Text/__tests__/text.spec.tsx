@@ -1,113 +1,83 @@
-import { render } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
-import { ThemeProvider } from '@/theme/provider'
 import { bodyFonts } from '@/styles/typography'
 import { ligthTextColors, darkTextColors } from '@/styles/colors'
 
+import { renderWithTheme } from '@/tests/render-with-theme'
+
 import { Text, TextProps } from '@/components/atoms/Text'
 
-type SutTypes = {
-  sut: Element
-}
-
-type SutParams = {
-  textContent?: string
-  as?: TextProps['as']
-  variant?: TextProps['variant']
-  color?: TextProps['color']
-  dark?: boolean
-}
-
-const makeSut = (params: SutParams = { textContent: 'any_text' }): SutTypes => {
-  const { container } = render(
-    <ThemeProvider dark={params.dark}>
-      <Text as={params.as} variant={params.variant} color={params.color}>
-        {params.textContent}
-      </Text>
-    </ThemeProvider>
-  )
-
-  const sut = container.firstElementChild
-
-  return {
-    sut
-  }
-}
-
 const assertFontStyle = (sut: Element, font: TextProps['variant'] = 'body') => {
-  expect(sut).toHaveStyleRule(
-    'font-family',
-    bodyFonts[font.toUpperCase()].fontFamily
-  )
-  expect(sut).toHaveStyleRule('font-size', bodyFonts[font.toUpperCase()].size)
-  expect(sut).toHaveStyleRule(
-    'line-height',
-    bodyFonts[font.toUpperCase()].lineHeight
-  )
-  expect(sut).toHaveStyleRule(
-    'font-weight',
-    bodyFonts[font.toUpperCase()].weight
-  )
-  expect(sut).toHaveStyleRule('color', ligthTextColors.PRIMARY)
+  expect(sut).toHaveStyle({
+    'font-family': bodyFonts[font.toUpperCase()].fontFamily,
+    'font-size': bodyFonts[font.toUpperCase()].size,
+    'line-height': bodyFonts[font.toUpperCase()].lineHeight,
+    'font-weight': bodyFonts[font.toUpperCase()].weight,
+    color: ligthTextColors.PRIMARY
+  })
 }
 
-describe('Testing Text component', () => {
+describe('<Text />', () => {
   it('Should render Text with correct initial styles', () => {
-    const { sut } = makeSut()
+    renderWithTheme(<Text>text_content</Text>)
 
-    assertFontStyle(sut)
+    assertFontStyle(screen.getByText(/text_content/i))
   })
 
   it('Should render Text with correct children prop', () => {
     const textContent = 'text_content'
-    const { sut } = makeSut({ textContent })
+    renderWithTheme(<Text>{textContent}</Text>)
 
-    expect(sut.textContent).toBe(textContent)
+    expect(screen.getByText(textContent)).toBeInTheDocument()
   })
 
   it('Should render Text as paragraph by default', () => {
-    const { sut } = makeSut()
+    renderWithTheme(<Text>text_content</Text>)
 
-    expect(sut.tagName.toLowerCase()).toBe('p')
+    expect(screen.getByText(/text_content/i).tagName.toLowerCase()).toBe('p')
   })
 
   it('Should render Text with different html tag if "as" prop has been passed', () => {
     const tagName = 'strong'
-    const { sut } = makeSut({ as: tagName })
+    renderWithTheme(<Text as={tagName}>text_content</Text>)
 
-    expect(sut.tagName.toLowerCase()).toBe(tagName)
+    expect(screen.getByText(/text_content/i).tagName.toLowerCase()).toBe(
+      tagName
+    )
   })
 
   it('Should render with "BODY_LARGE" styles if "variants" prop is equal to "body_large"', () => {
-    const variant = 'body_large'
-    const { sut } = makeSut({ variant })
+    renderWithTheme(<Text variant="body_large">text_content</Text>)
 
-    assertFontStyle(sut, variant)
+    assertFontStyle(screen.getByText(/text_content/i), 'body_large')
   })
 
   it('Should render with "CAPTION" styles if "variants" prop is equal to "caption"', () => {
-    const variant = 'caption'
-    const { sut } = makeSut({ variant })
+    renderWithTheme(<Text variant="caption">text_content</Text>)
 
-    assertFontStyle(sut, variant)
+    assertFontStyle(screen.getByText(/text_content/i), 'caption')
   })
 
   it('Should render with "BODY_STRONG" styles if "variants" prop is equal to "body_strong"', () => {
-    const variant = 'body_strong'
-    const { sut } = makeSut({ variant })
+    renderWithTheme(<Text variant="body_strong">text_content</Text>)
 
-    assertFontStyle(sut, variant)
+    assertFontStyle(screen.getByText(/text_content/i), 'body_strong')
   })
 
   it('Should render with correct color', () => {
-    const { sut } = makeSut({ color: 'accent_primary' })
+    renderWithTheme(<Text color="accent_primary">text_content</Text>)
 
-    expect(sut).toHaveStyleRule('color', ligthTextColors.ACCENT_PRIMARY)
+    expect(screen.getByText(/text_content/i)).toHaveStyle({
+      color: ligthTextColors.ACCENT_PRIMARY
+    })
   })
 
   it('Should render with correct color if dark mode is enable', () => {
-    const { sut } = makeSut({ dark: true })
+    renderWithTheme(<Text>text_content</Text>, { dark: true })
 
-    expect(sut).toHaveStyleRule('color', darkTextColors.PRIMARY)
+    expect(screen.getByText(/text_content/i)).toHaveStyleRule(
+      'color',
+      darkTextColors.PRIMARY
+    )
   })
 })
