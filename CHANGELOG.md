@@ -1,3 +1,15 @@
+# v0.3.1 (Sat Sep 25 2021)
+
+#### 🐛 Bug Fix
+
+- Componente <Button /> [#21](https://github.com/gaoliveira21/react-win-ui/pull/21) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.2.0 (Sat Sep 25 2021)
 
 #### 🚀 Enhancement
