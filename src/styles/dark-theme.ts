@@ -1,7 +1,9 @@
 import {
   darkTextColors,
   darkAccentFillColors,
-  darkControlFillColors
+  darkControlFillColors,
+  darkControlStrokeColors,
+  darkFocusStrokeColos
 } from '@/styles/colors'
 import { baseTheme } from '@/styles/base-theme'
 
@@ -13,6 +15,10 @@ export const darkTheme = {
     fill: {
       accent: darkAccentFillColors,
       control: darkControlFillColors
+    },
+    stroke: {
+      control: darkControlStrokeColors,
+      focus: darkFocusStrokeColos
     }
   }
 }

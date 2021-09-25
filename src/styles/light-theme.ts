@@ -1,7 +1,9 @@
 import {
   lightTextColors,
   lightAccentFillColors,
-  lightControlFillColors
+  lightControlFillColors,
+  lightControlStrokeColors,
+  lightFocusStrokeColors
 } from '@/styles/colors'
 import { baseTheme } from '@/styles/base-theme'
 
@@ -13,6 +15,10 @@ export const lightTheme = {
     fill: {
       accent: lightAccentFillColors,
       control: lightControlFillColors
+    },
+    stroke: {
+      control: lightControlStrokeColors,
+      focus: lightFocusStrokeColors
     }
   }
 }
