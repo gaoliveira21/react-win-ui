@@ -26,8 +26,10 @@ export function ThemeProvider({
 
   return (
     <ThemeContext.Provider value={theme}>
-      <GlobalStyles />
-      <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
+      <StyledThemeProvider theme={theme}>
+        <GlobalStyles />
+        {children}
+      </StyledThemeProvider>
     </ThemeContext.Provider>
   )
 }
