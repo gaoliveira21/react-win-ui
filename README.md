@@ -4,7 +4,36 @@
 
 :art: UI Kit built with React based on [Windows UI](https://www.figma.com/community/file/989931624019688277)
 
-## :hammer_and_wrench: Tools
+## 📦 How to install
+
+To use React Win UI, you just need to install the react-win-ui package:
+
+```bash
+$ yarn add react-win-ui
+
+# or
+
+$ npm i react-win-ui
+```
+
+## 🔨 Usage
+
+To start using the components you need to wrap your application with the `ThemeProvider` provided by react-win-ui
+
+```javascript
+import { ThemeProvider } from 'react-win-ui'
+
+// Do this at the root of your application
+function App({ children }) {
+  return <ThemeProvider>{children}</ThemeProvider>
+}
+```
+
+## :memo: Looking for the documentation?
+
+online demo: https://gaoliveira21.github.io/react-win-ui
+
+## :hammer_and_wrench: Development tools
 
 - :atom: [ReactJS](https://pt-br.reactjs.org/)
 - :collision: [TypeScript](https://www.typescriptlang.org/)
