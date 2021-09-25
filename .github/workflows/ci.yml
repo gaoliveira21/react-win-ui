@@ -17,10 +17,10 @@ jobs:
           node-version: 14.x
 
       - name: Install dependencies
-        run: yarn
+        run: npm i
 
       - name: Linting
-        run: yarn lint
+        run: npm run lint
 
       - name: Test
-        run: yarn test:ci
+        run: npm run test:ci
