@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import { Button } from '@/components/atoms/Button'
 import { renderWithTheme } from '@/tests/render-with-theme'
@@ -22,5 +23,14 @@ describe('<Button />', () => {
       lightAccentFillColors.DISABLED,
       { modifier: ':disabled' }
     )
+  })
+
+  it('Should calls onClick', () => {
+    const onClick = jest.fn()
+    renderWithTheme(<Button onClick={onClick}>text</Button>)
+
+    userEvent.click(screen.getByRole('button', { name: /text/i }))
+
+    expect(onClick).toHaveBeenCalled()
   })
 })
