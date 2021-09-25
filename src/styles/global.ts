@@ -3,7 +3,7 @@ import { createGlobalStyle, css } from 'styled-components'
 export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'SegoeUI';
-    src: url('/fonts/SegoeUI/SegoeUI-VF.ttf');
+    src: url('./fonts/SegoeUI/SegoeUI-VF.ttf');
     font-display: swap;
   }
 
