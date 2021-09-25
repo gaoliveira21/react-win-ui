@@ -1,6 +1,6 @@
 import { TextColors } from './tokens'
 
-export const ligthTextColors: TextColors = {
+export const lightTextColors: TextColors = {
   PRIMARY: 'rgb(0,0,0)',
   SECONDARY: 'rgba(0,0,0,0.63)',
   TERTIARY: 'rgba(0,0,0,0.45)',
