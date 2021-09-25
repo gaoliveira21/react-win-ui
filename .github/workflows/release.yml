@@ -23,7 +23,7 @@ jobs:
 
       - name: Create Release
         run: |
-            npm i
+            npm ci
             npm run build
             npm run release
         env:

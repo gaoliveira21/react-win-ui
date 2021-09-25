@@ -19,7 +19,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm i
+          npm ci
           npm run docs:build
 
       - name: Deploy Documentation
