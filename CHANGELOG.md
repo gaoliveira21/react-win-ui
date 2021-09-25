@@ -1,3 +1,15 @@
+# v0.1.1 (Sat Sep 25 2021)
+
+#### 🐛 Bug Fix
+
+- Refatoração do setup do projeto [#14](https://github.com/gaoliveira21/react-win-ui/pull/14) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.1.0 (Sun Aug 22 2021)
 
 #### 🚀 Enhancement
