@@ -21,7 +21,10 @@ describe('<Text />', () => {
   it('Should render Text with correct initial styles', () => {
     renderWithTheme(<Text>text_content</Text>)
 
-    assertFontStyle(screen.getByText(/text_content/i))
+    const text = screen.getByText(/text_content/i)
+
+    assertFontStyle(text)
+    expect(text).toMatchSnapshot()
   })
 
   it('Should render Text with correct children prop', () => {

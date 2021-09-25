@@ -24,10 +24,10 @@ describe('<Heading />', () => {
   it('Should render Heading with correct initial styles', () => {
     renderWithTheme(<Heading>text_content</Heading>)
 
-    assertFontStyle(
-      screen.getByRole('heading', { name: /text_content/i }),
-      'subtitle'
-    )
+    const heading = screen.getByRole('heading', { name: /text_content/i })
+
+    assertFontStyle(heading, 'subtitle')
+    expect(heading).toMatchSnapshot()
   })
 
   it('Should render Heading with correct text content', () => {
