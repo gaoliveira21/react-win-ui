@@ -10,4 +10,11 @@ export default {
   }
 } as Meta<ButtonProps>
 
-export const Primary: Story<ButtonProps> = (args) => <Button {...args} />
+const Template: Story<ButtonProps> = (args) => <Button {...args} />
+
+export const Primary = Template.bind({}) as typeof Template
+
+export const Secondary = Template.bind({}) as typeof Template
+Secondary.args = {
+  variant: 'secondary'
+}
