@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { ThemeProvider } from '@/contexts/theme/provider'
+import { ThemeProvider } from '@/theme/provider'
 import { bodyFonts } from '@/styles/typography'
 import { ligthTextColors, darkTextColors } from '@/styles/colors'
 
