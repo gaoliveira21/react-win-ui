@@ -21,6 +21,29 @@
 
 ---
 
+# v0.2.0 (Sat Sep 25 2021)
+
+#### 🚀 Enhancement
+
+- chore(workflows): fronze lockfile [#20](https://github.com/gaoliveira21/react-win-ui/pull/20) ([@gaoliveira21](https://github.com/gaoliveira21))
+- Componente <Heading /> [#16](https://github.com/gaoliveira21/react-win-ui/pull/16) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### 🐛 Bug Fix
+
+- fix(build): skip lib check [#19](https://github.com/gaoliveira21/react-win-ui/pull/19) ([@gaoliveira21](https://github.com/gaoliveira21))
+- fix(workflows): add npm i script [#18](https://github.com/gaoliveira21/react-win-ui/pull/18) ([@gaoliveira21](https://github.com/gaoliveira21))
+- chore(workflows): remove yarn [#17](https://github.com/gaoliveira21/react-win-ui/pull/17) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### 📝 Documentation
+
+- update README.md [#15](https://github.com/gaoliveira21/react-win-ui/pull/15) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.1.1 (Sat Sep 25 2021)
 
 #### 🐛 Bug Fix
