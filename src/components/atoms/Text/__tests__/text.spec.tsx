@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 
 import { bodyFonts } from '@/styles/typography'
-import { ligthTextColors, darkTextColors } from '@/styles/colors'
+import { lightTextColors, darkTextColors } from '@/styles/colors'
 
 import { renderWithTheme } from '@/tests/render-with-theme'
 
@@ -13,7 +13,7 @@ const assertFontStyle = (sut: Element, font: TextProps['variant'] = 'body') => {
     'font-size': bodyFonts[font.toUpperCase()].size,
     'line-height': bodyFonts[font.toUpperCase()].lineHeight,
     'font-weight': bodyFonts[font.toUpperCase()].weight,
-    color: ligthTextColors.PRIMARY
+    color: lightTextColors.PRIMARY
   })
 }
 
@@ -21,7 +21,10 @@ describe('<Text />', () => {
   it('Should render Text with correct initial styles', () => {
     renderWithTheme(<Text>text_content</Text>)
 
-    assertFontStyle(screen.getByText(/text_content/i))
+    const text = screen.getByText(/text_content/i)
+
+    assertFontStyle(text)
+    expect(text).toMatchSnapshot()
   })
 
   it('Should render Text with correct children prop', () => {
@@ -68,7 +71,7 @@ describe('<Text />', () => {
     renderWithTheme(<Text color="accent_primary">text_content</Text>)
 
     expect(screen.getByText(/text_content/i)).toHaveStyle({
-      color: ligthTextColors.ACCENT_PRIMARY
+      color: lightTextColors.ACCENT_PRIMARY
     })
   })
 

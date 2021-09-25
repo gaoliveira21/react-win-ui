@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 
 import { headingFonts } from '@/styles/typography'
-import { darkTextColors, ligthTextColors } from '@/styles/colors'
+import { darkTextColors, lightTextColors } from '@/styles/colors'
 
 import { renderWithTheme } from '@/tests/render-with-theme'
 
@@ -16,7 +16,7 @@ const assertFontStyle = (
     'font-size': headingFonts[font.toUpperCase()].size,
     'line-height': headingFonts[font.toUpperCase()].lineHeight,
     'font-weight': headingFonts[font.toUpperCase()].weight,
-    color: ligthTextColors.PRIMARY
+    color: lightTextColors.PRIMARY
   })
 }
 
@@ -24,10 +24,10 @@ describe('<Heading />', () => {
   it('Should render Heading with correct initial styles', () => {
     renderWithTheme(<Heading>text_content</Heading>)
 
-    assertFontStyle(
-      screen.getByRole('heading', { name: /text_content/i }),
-      'subtitle'
-    )
+    const heading = screen.getByRole('heading', { name: /text_content/i })
+
+    assertFontStyle(heading, 'subtitle')
+    expect(heading).toMatchSnapshot()
   })
 
   it('Should render Heading with correct text content', () => {
@@ -82,7 +82,7 @@ describe('<Heading />', () => {
     renderWithTheme(<Heading color="accent_primary">text_content</Heading>)
 
     expect(screen.getByRole('heading', { name: /text_content/i })).toHaveStyle({
-      color: ligthTextColors.ACCENT_PRIMARY
+      color: lightTextColors.ACCENT_PRIMARY
     })
   })
 
