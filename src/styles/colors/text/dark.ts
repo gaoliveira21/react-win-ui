@@ -10,5 +10,7 @@ export const darkTextColors: TextColors = {
   ACCENT_TERTIARY: 'rgb(96,205,255)',
 
   DISABLED: 'rgba(255,255,255,0.36)',
-  ON_ACCENT: 'rgb(0,0,0)'
+  ON_ACCENT: 'rgb(0,0,0)',
+
+  ON_ACCENT_DISABLED: 'rgba(255,255,255,0.53)'
 }

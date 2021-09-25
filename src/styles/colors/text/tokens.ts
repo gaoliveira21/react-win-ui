@@ -7,5 +7,6 @@ export type TextTypes =
   | 'ACCENT_TERTIARY'
   | 'DISABLED'
   | 'ON_ACCENT'
+  | 'ON_ACCENT_DISABLED'
 
 export type TextColors = Record<TextTypes, string>
