@@ -3,7 +3,8 @@ import {
   lightAccentFillColors,
   lightControlFillColors,
   lightControlStrokeColors,
-  lightFocusStrokeColors
+  lightFocusStrokeColors,
+  lightControlElevationColors
 } from '@/styles/colors'
 import { baseTheme } from '@/styles/base-theme'
 
@@ -19,6 +20,9 @@ export const lightTheme = {
     stroke: {
       control: lightControlStrokeColors,
       focus: lightFocusStrokeColors
+    },
+    elevation: {
+      control: lightControlElevationColors
     }
   }
 }
