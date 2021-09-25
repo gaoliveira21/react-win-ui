@@ -13,7 +13,7 @@ export const lightControlFillColors: ControlFillColors = {
   CONTROL_SECONDARY: 'rgba(249,249,249, 0.5)',
   CONTROL_TERTIARY: 'rgba(249,249,249, 0.3)',
 
-  DISABLED: 'rgba(249,249,249, 0.3)',
+  DISABLED: 'rgba(249,249,249,0.3)',
   TRANSPARENT: 'rgb(255,255,255)',
   ACTIVE: 'rgb(255,255,255)'
 }
