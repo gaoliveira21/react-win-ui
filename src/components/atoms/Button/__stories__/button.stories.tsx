@@ -4,7 +4,7 @@ import { Button, ButtonProps } from '@/components/atoms/Button'
 import { ThemeProvider } from '@/theme/provider'
 
 export default {
-  title: 'Button',
+  title: 'React Win UI/Atoms/Button',
   component: Button,
   args: {
     children: 'Text'
