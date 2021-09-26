@@ -4,7 +4,7 @@ export const Input = styled.input`
   ${({ theme }) => css`
     background-color: ${theme.colors.fill.control.CONTROL_PRIMARY};
     border: 1px solid ${theme.colors.elevation.textControl.BORDER};
-    border-bottom: 2px solid ${theme.colors.elevation.textControl.BORDER};
+    border-bottom: 2px solid ${theme.colors.stroke.control.SECONDARY};
 
     color: ${theme.colors.text.PRIMARY};
     font-size: ${theme.fonts.text.BODY.size};

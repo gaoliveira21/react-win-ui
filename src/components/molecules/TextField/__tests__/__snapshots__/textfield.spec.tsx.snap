@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Input /> Should calls onChange when user types 1`] = `
+exports[`<TextField /> Should calls onChange with correct value 1`] = `
 .c0 {
   background-color: rgba(255,255,255,0.7);
   border: 1px solid rgba(0,0,0,0.05);
@@ -59,6 +59,7 @@ exports[`<Input /> Should calls onChange when user types 1`] = `
 
 <input
   class="c0"
-  placeholder="input"
+  id="textinput"
+  value=""
 />
 `;

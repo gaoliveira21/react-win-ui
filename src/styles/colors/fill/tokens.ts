@@ -12,6 +12,14 @@ export type ControlFillTypes =
   | 'TRANSPARENT'
   | 'ACTIVE'
 
+export type SubtleFillTypes =
+  | 'TRANSPARENT'
+  | 'SECONDARY'
+  | 'TERTIARY'
+  | 'DISABLED'
+
 export type AccentFillColors = Record<AccentFillTypes, string>
 
 export type ControlFillColors = Record<ControlFillTypes, string>
+
+export type SubtleFillColors = Record<SubtleFillTypes, string>
