@@ -4,7 +4,7 @@ exports[`<Input /> Should calls onChange when user types 1`] = `
 .c0 {
   background-color: rgba(255,255,255,0.7);
   border: 1px solid rgba(0,0,0,0.05);
-  border-bottom: 2px solid rgba(0,0,0,0.16);
+  border-bottom: 2px solid rgba(0,0,0,0.22);
   color: rgb(0,0,0);
   font-size: 14px;
   font-weight: 400;
