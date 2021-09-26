@@ -1,3 +1,15 @@
+# v0.3.5 (Sun Sep 26 2021)
+
+#### 🐛 Bug Fix
+
+- Componente <PasswordField /> [#26](https://github.com/gaoliveira21/react-win-ui/pull/26) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.3.3 (Sun Sep 26 2021)
 
 #### 🐛 Bug Fix
