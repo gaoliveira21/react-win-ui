@@ -1,3 +1,5 @@
 export * from './Text'
 export * from './Heading'
 export * from './Button'
+export * from './Input'
+export * from './Label'

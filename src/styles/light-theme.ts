@@ -4,7 +4,8 @@ import {
   lightControlFillColors,
   lightControlStrokeColors,
   lightFocusStrokeColors,
-  lightControlElevationColors
+  lightControlElevationColors,
+  lightTextControlElevationColors
 } from '@/styles/colors'
 import { baseTheme } from '@/styles/base-theme'
 
@@ -22,7 +23,8 @@ export const lightTheme = {
       focus: lightFocusStrokeColors
     },
     elevation: {
-      control: lightControlElevationColors
+      control: lightControlElevationColors,
+      textControl: lightTextControlElevationColors
     }
   }
 }

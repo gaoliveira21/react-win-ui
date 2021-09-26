@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> Should render Label with correct text content 1`] = `
+.c0 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(0,0,0);
+}
+
+<label
+  class="c0"
+>
+  any_text
+</label>
+`;
