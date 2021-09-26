@@ -40,4 +40,21 @@ describe('<PasswordField />', () => {
 
     expect(input).toHaveValue(value)
   })
+
+  it('Should show and hide password', () => {
+    renderWithTheme(<PasswordField label="password input" />)
+
+    const input = screen.getByLabelText(/password input/i)
+    expect(input).toHaveProperty('type', 'password')
+
+    const toggleButton = screen.getByRole('button', {
+      name: /toggle password/i
+    })
+
+    userEvent.click(toggleButton)
+    expect(input).toHaveProperty('type', 'text')
+
+    userEvent.click(toggleButton)
+    expect(input).toHaveProperty('type', 'password')
+  })
 })
