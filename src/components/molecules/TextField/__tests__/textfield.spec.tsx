@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import { TextField } from '@/components/molecules/TextField'
 import { renderWithTheme } from '@/tests/render-with-theme'
-import userEvent from '@testing-library/user-event'
 
 describe('<TextField />', () => {
   it('Should calls onChange with correct value', () => {
