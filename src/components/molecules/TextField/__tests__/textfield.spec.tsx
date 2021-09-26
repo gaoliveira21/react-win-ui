@@ -63,4 +63,22 @@ describe('<TextField />', () => {
       ).not.toBeInTheDocument()
     )
   })
+
+  it('Should clear TextField and calls onChange', () => {
+    const onChange = jest.fn()
+    renderWithTheme(<TextField label="text input" onChange={onChange} />)
+
+    const input = screen.getByLabelText(/text input/i)
+    userEvent.type(input, 'any_value')
+
+    const closeButton = screen.getByRole('button', { name: 'clear' })
+    userEvent.click(closeButton)
+
+    expect(input).toHaveValue('')
+    expect(onChange).toHaveBeenCalled()
+
+    const event = onChange.mock.calls[0][0]
+
+    expect(event.target.value).toBe('')
+  })
 })
