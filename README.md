@@ -33,7 +33,31 @@ function App({ children }) {
 
 online demo: https://gaoliveira21.github.io/react-win-ui
 
-## :hammer_and_wrench: Development tools
+## :construction_worker: Developer guide
+
+### :clipboard: Requirements
+
+- [NodeJS LTS](https://nodejs.org/en/)
+
+### :notebook: How to run
+
+```bash
+# Clone this repo
+$ git clone <git@github.com:gaoliveira21/react-win-ui.git>
+
+# Go to the project folder
+$ cd react-win-ui
+
+# Install dependencies
+$ npm i
+
+# Start storybook server
+$ npm run docs:start
+
+By default the server starts at port:3000
+```
+
+### :hammer_and_wrench: Development tools
 
 - :atom: [ReactJS](https://pt-br.reactjs.org/)
 - :collision: [TypeScript](https://www.typescriptlang.org/)
