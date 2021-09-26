@@ -1,3 +1,19 @@
+# v0.3.3 (Sun Sep 26 2021)
+
+#### 🐛 Bug Fix
+
+- Criação do componente <TextField /> [#25](https://github.com/gaoliveira21/react-win-ui/pull/25) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### 📝 Documentation
+
+- Melhorias na documentação [#24](https://github.com/gaoliveira21/react-win-ui/pull/24) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.3.2 (Sun Sep 26 2021)
 
 #### 🐛 Bug Fix
