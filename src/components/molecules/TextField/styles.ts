@@ -14,11 +14,11 @@ export const ClearButton = styled.button`
   ${({ theme }) => css`
     position: absolute;
     bottom: 3px;
-    right: 8px;
+    right: 4px;
     color: ${theme.colors.text.SECONDARY};
     background-color: ${theme.colors.fill.subtle.TRANSPARENT};
     padding: 6px 8px;
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 4px;
     transition: background-color 0.3s;
 

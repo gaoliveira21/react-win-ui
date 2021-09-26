@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { RiCloseFill } from 'react-icons/ri'
 
 import { Label, Input } from '@/components/atoms'
 
@@ -49,7 +50,7 @@ export function TextField({
       />
       {showClear && (
         <S.ClearButton onClick={onClear} aria-label="clear">
-          X
+          <RiCloseFill />
         </S.ClearButton>
       )}
     </S.Wrapper>
