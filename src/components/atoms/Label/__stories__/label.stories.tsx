@@ -4,7 +4,7 @@ import { Label, LabelProps } from '@/components/atoms/Label'
 import { ThemeProvider } from '@/theme/provider'
 
 export default {
-  title: 'Label',
+  title: 'React Win UI/Atoms/Label',
   component: Label,
   args: {
     children: 'Helper text'
