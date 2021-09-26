@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import { Label, Input } from '@/components/atoms'
 
@@ -18,6 +18,9 @@ export function TextField({
   placeholder
 }: TextFieldProps): React.ReactElement {
   const id = label.replace(/\W/g, '').toLowerCase()
+
+  const inputRef = useRef<HTMLInputElement>(null)
+
   const [showClear, setShowClear] = useState(false)
   let timerId: NodeJS.Timeout
 
@@ -29,6 +32,10 @@ export function TextField({
     clearTimeout(timerId)
   }
 
+  const onClear = () => {
+    inputRef.current.value = ''
+  }
+
   return (
     <S.Wrapper onBlur={onBlur} onFocus={onFocus}>
       <Label htmlFor={id}>{label}</Label>
@@ -38,8 +45,13 @@ export function TextField({
         onChange={onChange}
         value={value}
         onClick={() => setShowClear(true)}
+        ref={inputRef}
       />
-      {showClear && <S.ClearButton aria-label="clear">X</S.ClearButton>}
+      {showClear && (
+        <S.ClearButton onClick={onClear} aria-label="clear">
+          X
+        </S.ClearButton>
+      )}
     </S.Wrapper>
   )
 }
