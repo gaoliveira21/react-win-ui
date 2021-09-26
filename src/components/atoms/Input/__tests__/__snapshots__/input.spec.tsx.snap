@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> Should calls onChange when user types 1`] = `
+.c0 {
+  background-color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 2px solid rgba(0,0,0,0.16);
+  color: rgb(0,0,0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 4px 35px 6px 11px;
+  border-radius: 3px;
+}
+
+.c0::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0,0,0,0.63);
+}
+
+.c0::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0,0,0,0.63);
+}
+
+.c0:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0,0,0,0.63);
+}
+
+.c0::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0,0,0,0.63);
+}
+
+.c0:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(0,95,184);
+  background-color: rgb(255,255,255);
+}
+
+.c0:hover:not(:focus,:disabled) {
+  background-color: rgba(249,249,249,0.5);
+}
+
+.c0:disabled {
+  background-color: rgba(249,249,249,0.3);
+  color: rgba(0,0,0,0.36);
+  cursor: not-allowed;
+}
+
+<input
+  class="c0"
+  placeholder="input"
+/>
+`;
