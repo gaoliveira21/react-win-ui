@@ -5,7 +5,8 @@ import {
   darkControlStrokeColors,
   darkFocusStrokeColos,
   darkControlElevationColors,
-  darkTextControlElevationColors
+  darkTextControlElevationColors,
+  darkSubtleFillColors
 } from '@/styles/colors'
 import { baseTheme } from '@/styles/base-theme'
 
@@ -16,7 +17,8 @@ export const darkTheme = {
     text: darkTextColors,
     fill: {
       accent: darkAccentFillColors,
-      control: darkControlFillColors
+      control: darkControlFillColors,
+      subtle: darkSubtleFillColors
     },
     stroke: {
       control: darkControlStrokeColors,

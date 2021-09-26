@@ -1,4 +1,4 @@
-import { AccentFillColors, ControlFillColors } from './tokens'
+import { AccentFillColors, ControlFillColors, SubtleFillColors } from './tokens'
 
 export const lightAccentFillColors: AccentFillColors = {
   ACCENT_PRIMARY: 'rgb(0,95,184)',
@@ -16,4 +16,11 @@ export const lightControlFillColors: ControlFillColors = {
   DISABLED: 'rgba(249,249,249,0.3)',
   TRANSPARENT: 'rgb(255,255,255)',
   ACTIVE: 'rgb(255,255,255)'
+}
+
+export const lightSubtleFillColors: SubtleFillColors = {
+  TRANSPARENT: 'rgb(255,255,255)',
+  SECONDARY: 'rgba(0,0,0,0.04)',
+  TERTIARY: 'rgba(0,0,0,0.025)',
+  DISABLED: 'rgb(0,0,0)'
 }
