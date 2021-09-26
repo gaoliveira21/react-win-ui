@@ -60,6 +60,6 @@ exports[`<TextField /> Should calls onChange with correct value 1`] = `
 <input
   class="c0"
   id="textinput"
-  placeholder="text"
+  value=""
 />
 `;

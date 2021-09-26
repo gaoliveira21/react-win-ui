@@ -21,4 +21,21 @@ describe('<TextField />', () => {
     expect(input).toHaveValue(typedValue)
     expect(input).toMatchSnapshot()
   })
+
+  it('Should receive a value and placeholder prop', () => {
+    const value = 'any_value'
+    const placeholder = 'any_placeholder'
+    renderWithTheme(
+      <TextField
+        label="text input"
+        placeholder={placeholder}
+        value={value}
+        onChange={() => {}}
+      />
+    )
+
+    const input = screen.getByPlaceholderText(placeholder)
+
+    expect(input).toHaveValue(value)
+  })
 })
