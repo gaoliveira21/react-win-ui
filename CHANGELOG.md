@@ -1,3 +1,19 @@
+# v0.3.2 (Sun Sep 26 2021)
+
+#### 🐛 Bug Fix
+
+- Componente <Input /> e <Label /> [#23](https://github.com/gaoliveira21/react-win-ui/pull/23) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### 🔩 Dependency Updates
+
+- Correção de dependências [#22](https://github.com/gaoliveira21/react-win-ui/pull/22) ([@gaoliveira21](https://github.com/gaoliveira21))
+
+#### Authors: 1
+
+- Gabriel José de Oliveira ([@gaoliveira21](https://github.com/gaoliveira21))
+
+---
+
 # v0.3.1 (Sat Sep 25 2021)
 
 #### 🐛 Bug Fix
